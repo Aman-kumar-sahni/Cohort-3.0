@@ -69,20 +69,38 @@
 // let bigint = 2389920020227492002n
 // console.log(typeof(bigint))
 
-                                                                                                      // ## Type Conversion & Coercion
 
-                                                                                                     // 1. Convert the string `"50"` into a number.
 
-                                                                                                    // 2. Convert the number `100` into a string.
 
-                                                                                                   // 3. Convert `"true"` into a boolean.
 
-                                                                                                                                                                                                                                                                             // 4. Check the output of:
-                                                                                                    // - `"5" + 2`
-                                                                                                    // - `"5" - 2`
-                                                                                                   // - `true + 1`
-                                                                                                   // 1. Create a variable with value `"123abc"` and convert it into a number.
-                                                                                                   // 2. Use `parseInt()` on `"500px"`.
+//                                                           // ## Type Conversion & Coercion
+
+//     // 1. Convert the string `"50"` into a number.
+
+//     console.log(Number("50"))
+
+//     // 2. Convert the number `100` into a string.
+    
+//     let number =100
+//     console.log(number.toString())
+    
+// // 3. Convert `"true"` into a boolean.
+
+// let boolean = "true"
+// console.log(Boolean(boolean))
+// // 4. Check the output of:
+// // - `"5" + 2`
+//     console.log("5"+2 )
+//     // - `"5" - 2`
+//     console.log("5"-2)
+
+// // - `true + 1`
+// console.log(true + 1)
+// // 1. Create a variable with value `"123abc"` and convert it into a number.
+// let variable = "123abc"
+//     console.log(Number(variable))
+// // 2. Use `parseInt()` on `"500px"`.
+// console.log(parseInt("500px"))
 
 
 //  //    ## Operators
@@ -136,37 +154,40 @@
 
                                                                                             // // ## Strings
 
-                                                                                            // // 1. Create a string and print its length.
-                                                                                            // let string = "String"
-                                                                                            // console.log(string.length);
+//     // // 1. Create a string and print its length.
+//      let string = "String"
+//     console.log(string.length);
+//  // // 2. Convert a string into uppercase.
+//     console.log(string.toUpperCase());
+//     // // 3. Convert a string into lowercase.
+//     console.log(string.toLowerCase())
+//     // // 4. Check if a string includes the word `"JavaScript"`.
+//     console.log(string.includes("JavaScript"))
+//     // // 5. Extract the word `"World"` from `"Hello World"`.
+//     let newString = "Hello World";
+//     console.log(nnewString.slice(6))
+//     // // 6. Replace `"apple"` with `"mango"` in a sentence.
+//     let fruits = "apple"
+// let newfruits = fruits.replace("apple","mango");
+//     console.log(newfruits)
+//     // // 7. Split `"HTML,CSS,JS"` into an array.
+//     let language = "HTML,CSS,JS"
+//     console.log(language.split("HTML,CSS,JS"))
+//     // 8. Remove extra spaces from a string.
+//     // let extraSpaces = "   hello bachoo    "
+//     // console.log(extraSpaces.trim())
+//     // // 9. Repeat the word `"Hi"` 5 times.
+//     // for (let a =0; a<=5;a++){
+//     // console.log("Hi")
+//     // }
+//     // // 10. Print the first character of a string.
+//     // console.log(string[0])
+//     // // 11. Use template literals to print:`"My name is Aman and I am 20 years old"`
+//     // console.log(`My name is Aman and I am 20 years old`)
 
-                                                                                            // // 2. Convert a string into uppercase.
-                                                                                            // console.log(string.toUpperCase());
-                                                                                            // // 3. Convert a string into lowercase.
-                                                                                            // console.log(string.toLowerCase())
-                                                                                            // // 4. Check if a string includes the word `"JavaScript"`.
-                                                                                            // console.log(string.includes("JavaScript"))
-                                                                                            // // 5. Extract the word `"World"` from `"Hello World"`.
-                                                                                            // let newString = "Hello World";
-                                                                                            // console.log(splice(6,5))
-                                                                                            // // 6. Replace `"apple"` with `"mango"` in a sentence.
-                                                                                            // let fruits = "apple"
-                                                                                            // let newfruits  = fruits.replace("mango")
-                                                                                            // console.log(newfruits)
-                                                                                            // // 7. Split `"HTML,CSS,JS"` into an array.
-                                                                                            // let language = "HTML,CSS,JS"
-                                                                                            // let arr = language.split()
-                                                                                            // console.log(arr)
-                                                                                            // // 8. Remove extra spaces from a string.
-                                                                                            // let extraSpaces = "   hello bachoo    "
-                                                                                            // console.log(extraSpaces.trim())
-                                                                                            // // 9. Repeat the word `"Hi"` 5 times.
-                                                                                            // for (let a =0; a<=5;a++){
-                                                                                            // console.log("Hi")
-                                                                                            // }
-                                                                                            // // 10. Print the first character of a string.
-                                                                                            // console.log(string[0])
-                                                                                            // // 11. Use template literals to print:`"My name is Aman and I am 20 years old"`
-                                                                                            // console.log(`My name is Aman and I am 20 years old`)
+// // now rest of the question solved in phase 1 class 2 
 
-// now rest of the question solved in phase 1 class 2 
+
+
+
+

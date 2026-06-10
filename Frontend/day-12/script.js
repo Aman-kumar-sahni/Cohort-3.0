@@ -1,12 +1,19 @@
 // ## Numbers & Math
 
-// 1. Round `4.7` using `Math.round()`.
-// 2. Find the square root of 81.
-// 3. Find the maximum number from `10, 20, 5, 99`.
-// 4. Generate a random number between 1 and 10.
-// 5. Convert `"99.99"` into an integer.
-// 6. Check whether `25` is an integer or not.
-// 7. Use `toFixed(2)` on `3.141592`.
+// // 1. Round `4.7` using `Math.round()`.
+// console.log(Math.round(4.7))
+// // 2. Find the square root of 81.
+// console.log(Math.sqrt(81))
+// // 3. Find the maximum number from `10, 20, 5, 99`.
+// console.log(Math.max(10,20,5,99))
+// // 4. Generate a random number between 1 and 10.
+// console.log(Math.floor(Math.random()*10)+1)
+// // 5. Convert `"99.99"` into an integer.
+// console.log(Math.floor(Number("99.99")))
+// // 6. Check whether `25` is an integer or not.
+// console.log(Number.isInteger(25))
+// // 7. Use `toFixed(2)` on `3.141592`.
+// console.log(3.141592.toFixed(2))
 
 
 
@@ -26,22 +33,39 @@
 // - below 50 → Fail
 // 1. Check whether a character is a vowel or consonant.
 // 2. Create a calculator using `switch` statement.
-// 3. Print the day name based on a number (1–7).
-// 4. Check whether a username is `"admin"` and password is `"1234"`.
+
+
+// 3. Print the day name based on a number (1–7)
+// let number ;
+
+// switch (number){
+//     case 1 : console.log("monday");
+//     break;
+//     case 2:console.log("tuesday")
+//     break;
+// }
+
+// 4. Check whether a username is `"admin"` and password is `"1234"`.;
+
 
 
 // ## Truthy & Falsy
 
-// 1. Check whether an empty string is truthy or falsy.
+// // 1. Check whether an empty string is truthy or falsy.
+// if(""){
+//     console.log("truthy")
+// }else console.log("falsy")
 // 2. Check whether `0` is truthy or falsy.
 // 3. Check whether `[]` is truthy or falsy.
 // 4. Create a variable and print `"Valid"` if it has a value otherwise print `"Invalid"`.
-
 // ## Ternary Operator
 
 // 1. Check whether a number is even or odd using ternary operator.
 // 2. Check whether age is above 18 using ternary operator.
 // 3. Find the greater number between two values using ternary operator.
+let a =10;
+let b=20 ;
+{a>b?console.log(`${a} is greater number`):console.log(`${b}is greater`)}
 
 
 // ## Mixed Practice Questions
