@@ -62,49 +62,63 @@
 
 // 1. Check whether a number is even or odd using ternary operator.
 // 2. Check whether age is above 18 using ternary operator.
-// 3. Find the greater number between two values using ternary operator.
-let a =10;
-let b=20 ;
-{a>b?console.log(`${a} is greater number`):console.log(`${b}is greater`)}
+// // 3. Find the greater number between two values using ternary operator.
+// let a =10;
+// let b=20 ;
+// {a>b?console.log(`${a} is greater number`):console.log(`${b}is greater`)}
 
 
 // ## Mixed Practice Questions
 
-// 1. Create a mini biodata program using variables and template literals.
-// 2. Calculate the area of a rectangle.
-// 3. Calculate the simple interest.
-// 4. Convert temperature from Celsius to Fahrenheit.
-// 5. Convert kilometers into meters.
-// 6. Calculate total marks and percentage of 5 subjects.
-// 7. Calculate electricity bill based on units consumed.
-// 8. Create a username generator using first name and birth year.
-// 9. Check whether a string starts with a specific letter.
-// 10. Count the total characters in a sentence excluding spaces.
+// 1. Create a mini biodata program using variables and template literals.=done
+// 2. Calculate the area of a rectangle.=done 
+
+// 3. Calculate the simple interest.=done
+// 4. Convert temperature from Celsius to Fahrenheit.=done
+// 5. Convert kilometers into meters.=done
+
+// 6. Calculate total marks and percentage of 5 subjects.=done
+// 7. Calculate electricity bill based on units consumed.=done
+// 8. Create a username generator using first name and birth year.=done
+// 9. Check whether a string starts with a specific letter.=done
+
+// 10. Count the total characters in a sentence excluding spaces.=done
 
 // ## Logical Thinking Questions
 
-// 1. Take two numbers and print which one is greater.
-// 2. Check whether a number lies between 10 and 50.
-// 3. Check whether a password length is greater than 8.
-// 4. Check if a person can drive:
-// - age > 18
-// - has license = true
-// 1. Check whether a number is divisible by 2, 3, or both.
-// 2. Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
-// 3. Find whether a number is a multiple of 10.
-// 4. Create a simple discount calculator.
-// 5. Check whether a product is in stock.
-// 6. Calculate final bill after GST.
+// 1. Take two numbers and print which one is greater.=done 
+// 2. Check whether a number lies between 10 and 50.=done
+// 3. Check whether a password length is greater than 8.=done
+// 4. Check if a person can drive:=done
+// - age > 18=done
+// - has license = true=done
+// 1. Check whether a number is divisible by 2, 3, or both.=done
+// 2. Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.=done
+// 3. Find whether a number is a multiple of 10.=done
+// 4. Create a simple discount calculator.=done
+// 5. Check whether a product is in stock.=done
+// 6. Calculate final bill after GST.=done
 
 // ## Challenge Questions for Beginners
 
-// 1. Generate a random OTP of 4 digits.
+// 1. Generate a random OTP of 4 digits.=done
+
 // 2. Reverse a 3-letter string manually.
+
 // 3. Find the last character of a string.
+
 // 4. Convert a full name into uppercase initials.
+
 // 5. Check whether two strings are equal ignoring case sensitivity.
+
+
 // 6. Create a simple login validation system.
+
+
 // 7. Find whether a number is a 2-digit or 3-digit number.
+
 // 8. Create a mini ATM balance checker.
+
 // 9. Simulate a traffic light system using `switch`.
+
 // 10. Build a small marksheet generator using variables and conditionals.
