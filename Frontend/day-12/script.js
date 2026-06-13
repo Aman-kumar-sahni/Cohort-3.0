@@ -103,22 +103,23 @@
 
 // 1. Generate a random OTP of 4 digits.=done
 
-// 2. Reverse a 3-letter string manually.
+                                                                                     // 2. Reverse a 3-letter string manually.=done
 
-// 3. Find the last character of a string.
+                                                                                      // 3. Find the last character of a string.
 
-// 4. Convert a full name into uppercase initials.
+                                                                                  // 4. Convert a full name into uppercase initials.
 
-// 5. Check whether two strings are equal ignoring case sensitivity.
-
-
-// 6. Create a simple login validation system.
+                                                                     // 5. Check whether two strings are equal ignoring case sensitivity.
 
 
-// 7. Find whether a number is a 2-digit or 3-digit number.
+// 6. Create a simple login validation system.=done
 
-// 8. Create a mini ATM balance checker.
 
-// 9. Simulate a traffic light system using `switch`.
 
-// 10. Build a small marksheet generator using variables and conditionals.
+// 7. Find whether a number is a 2-digit or 3-digit number.=done
+
+// 8. Create a mini ATM balance checker.=done
+
+// 9. Simulate a traffic light system using `switch`.=done
+
+// 10. Build a small marksheet generator using variables and conditionals.=done
