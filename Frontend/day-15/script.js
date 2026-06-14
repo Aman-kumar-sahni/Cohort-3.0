@@ -34,14 +34,14 @@
 // extra()
 // 7. Write a function currying example for addition.
 
- function add1 (a){
-    return function add2 (b){
- return a +b
-    }
- }
- let result = add1(5)(9)
- console.log(result)
-                                                                                                    // 8. Create debounce function logic.
+//  function add1 (a){
+//     return function add2 (b){
+//  return a +b
+//     }
+//  }
+//  let result = add1(5)(9)
+//  console.log(result)
+//                                                                                                     // 8. Create debounce function logic.
                                                                                                           // 9. Create throttle function logic.
                                                                                              // 10. Write a function that executes only once.
 
