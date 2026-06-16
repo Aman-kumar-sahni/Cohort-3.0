@@ -185,9 +185,34 @@
 //     // // 11. Use template literals to print:`"My name is Aman and I am 20 years old"`
 //     // console.log(`My name is Aman and I am 20 years old`)
 
-// // now rest of the question solved in phase 1 class 2 
+// let arr = [10, 20, 30, 40];
+// let sum =0 ;
+// for (let value of arr){
+//     sum = sum +value 
+// }
+// console.log(sum)
 
 
+// let str = "JavaScript";
+
+// for(let ch of str ){
+//     console.log(ch)
+// }
 
 
+// let arr = [5, 8, 9, 2];
+// for (let index in arr){
+//     console.log(index)
+//     console.log(arr[index])
+// }
 
+// let student = {
+//     name: "Aman",
+//     age: 20,
+//     city: "Muzaffarpur"
+// };
+// for (let keys in student){
+//         console.log(keys)
+
+//     console.log(student.keys)
+// }

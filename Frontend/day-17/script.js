@@ -19,4 +19,4 @@
 // 17. Find total price of shopping cart.
 // 18. Group users by age.
 // 19. Chain `filter` and `map`.
-// 20. Explain difference between `map` and `forEac`
+// 20. Explain difference between `map` and `forEach`
