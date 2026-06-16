@@ -100,7 +100,7 @@
 
 
 // 18. Group users by age.
-// forEach() is used to iterate over an array and perform an action, while map() is used to transform array elements and return a new array.
 
 
 // 20. Explain difference between `map` and `forEach`
+// forEach() is used to iterate over an array and perform an action, while map() is used to transform array elements and return a new array.
