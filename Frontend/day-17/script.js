@@ -1,106 +1,314 @@
+// # Part 5 — Objects Basics (76–90)
 
-            //    Part 4 — Array Iteration Methods (56–75)
-// 1. Use `forEach` to print all numbers doubled.
-// let array = [10,20,30,40,50,60,70,80,]
-// array.forEach(elem => {
-//     console.log(elem*2)
-// });
-// 2. Use `map` to square all numbers.
-// let array = [10,20,30,40,50,60,70,80,]
-// let result= array.map((elem )=>{
-//     return elem *elem
-// })           
-// 3. Use `filter` to get even numbers.\
-// let array = [10,20,30,40,50,60,70,80,]
-// let result = array.filter((elem)=>{
-//     return elem%3===0
-// })
-// console.log(result)
-// 4. Use `reduce` to calculate sum.
-// let array = [10,20,30,40,50,60,70,80,]
-// let result= array.reduce((acc,value)=>{
-//  return acc+value
-// },1)
-// console.log(result)
-// 5. Use `reduce` to find maximum number.
-// let array = [10,20,30,40,50,60,70,80,]
-// let result = array.reduce((acc,value)=>{
-//     if(acc<value )acc=value
-//     return acc
-// },0)
-// console.log(result)
-// 6. Use `find` to get first even number.
-//  let array = [11,20,30,40,50,60,70,80,]
-// let result=array.find((elem)=>{
-//     if (elem%2===0)return elem
-// })
-// console.log(result)
+// 1. Create object for a student.
 
-// // 7. Use `findIndex` to locate number > 50.
-// let array = [11,20,30,40,50,60,70,80,]
-// let result=array.findIndex((elem)=>{
-//     if (elem%3===0)return elem 
-// })
-// console.log(result)
+// let student = {
+//    name:"aman",
+//     class:"10"
+// }
+// // 2. Access properties using dot notation.
 
-// 8. Use `some` to check if any number is negative.
+// console.log(student.name)
 
-// let array = [11,20,30,40,50,60,-1,80,]
-// let result=array.some((elem)=>{
-//     return elem <0
-// })
-// console.log(result)
+// // 3. Access properties using bracket notation.
+// console.log(student["name"])
+// // 4. Add new property dynamically.
+// student.city="india"
+// console.log(student)
+// student={
+//     name:"piyu",
+//     class:"9th"
+// }
+// console.log(student)
+// 5. Update existing property.
+// let student = {
+//     name:"aman",
+//     class:"10" }
 
-// // 9. Use `every` to check if all numbers are positive.
-// let array = [11,20,30,40,50,60,70,80,]
-// let result=array.every((elem)=>{
-//     if (elem>0)return elem
-// })
-// console.log(result)
+//     student.name="suman"
+//     console.log(student)
 
-// 10. Create array of names and convert all to uppercase.
+// // 6. Delete a property.
+// delete(student.class)
+//     console.log(student)
+
+// 7. Create object method.
+// let student ={
+// Name :function (){
+//     console.log("Aman")
+//     return "kumar"
+// }
+// }
+// console.log(student.Name())
+// 8. Use `this` keyword inside method.
+// let student = {
+//     name:"Aman",
+//     class:"2nd",
+//     work:function(){
+//         console.log(this.name)
+//     }
+      
+// }
+// student.work()
+// 9. Create nested object.
+// let student ={
+//     studet1:{
+//         name:"aman"
+//     },
+// student2:{
+//     name:"suman"
+
+// }
+// }
+// console.log(student["student2"])
+
+// console.log(student.student2.name)
+// 10. Access deeply nested property.
+
+// let student ={
+//     student1:{
+//         name:"Aman kumar",
+//         class:75
+//     }
+
+// }
+// console.log(student.student1.name)
+// console.log(student.student1["class"])
+                                                                                                                                                                                                                                                                //11.   Destructure object properties.
+
+                                                                                                   //  12. Rename variables while destructuring.
+
+// // 13. Add default values during destructuring.
+// let student1= {
+//     name:"Aman kumar",
+//     class:75,
+//     section:"A"
+// }
+
+// let {name ="ravan", village="kalyanpur"}=student1
+// console.log(name,village)
+
+// 14. Copy object using spread operator.
+// let student = {
+//     name:"Aman kumar",
+//     class:53,
+   
+// }
+// let student2= {...student}
+// console.log(student2)
+// 15. Merge two objects.
+// let student= {
+//     name:"Aman kumar",
+//     class:99,
+//     scetion:20
+// }
+//  let student2= {
+//     name:"Aman kumar ",
+//     class:"graudated"
+// }
+// let student3 = {
+//     name:"bhagat sahni ",
+//     class:"undergraduated"
+// }
+// student = {
+//     ...student2,
+//     ...student3
+// }
+// console.log(student)
+
+// # Part 6 — Advanced Objects + Real Logic (91–100)
+
+// 1. Use `Object.keys()` on object.
+//  let student = {
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+//  }
+// console.log(Object.keys(student.student2)
+// )
+// 2. Use `Object.values()`.
+// let student = {
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+//  }
+// console.log(Object.values(student.student2)
+// )
+// 3. Use `Object.entries()`.
+// let student = {
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+//  }
+// console.log(Object.entries(student)
+// )
+// 4. Loop through object using `for...in`.
+// let student = {
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+
+//  }
+//  for(let index in student){
+//     console.log(index)
+//  }
+// console.log(
+// )
+
+// 5. Freeze an object and test modification.
+
+// student ={
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+
+// }
+// Object.freeze(student)
+//  student.name="suman"
+//  student.city="india"
+//  console.log(student)
 
 
-// 11. Filter all students with marks > 80.
-// let array = [11,20,30,40,50,60,70,80,]
-// let result=array.filter((elem)=>{
-//     if (elem>50)return elem
-// })
-// console.log(result)
+// let student = {
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
 
-// 12. Calculate average using reduce.
+//     }
 
-// 13. Count occurrences of numbers in array.
-//   let array = [11,20,30,30,50,60,70,100,90,80,80,]
+//  }
+
+// 6. Seal an object and test modification.
+// student ={
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+
+// }
+// Object.seal(student)
+//  student.name="suman"
+//  student.city="india"
+//  console.log(student)
+// 7. Create array of objects for users.
+// let users =[ {
+//     name :"Aman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"suman"
+
+//     }
+
+//  },{
+//     name :"suman kumar ",
+//     class:"graudation",
+//     section:"A",
+//     student2:{name:"raviau"
+
+//     }
+
+//  }
 
 
-
-// 14. Flatten nested arrays using `flat`.
-
-// 15. Remove duplicates using `Set`.
-//  let array = [11,20,30,30,50,60,70,100,90,80,80,]
+// ]
+// console.log(users[0].student2.name)
 
 
-//          let unique = [...new Set(array)]
-//          console.log(unique)
-// 16. Sort array of objects by age.
+// 8. Find user with highest age.
 // let users = [
 //     { name: "Aman", age: 20 },
-//     { name: "Rahul", age: 22 },
-//     { name: "Rohit", age: 19 },
-//     { name: "Priya", age: 21 },
-//     { name: "Anjali", age: 23 }
+//     { name: "Suman", age: 25 },
+//     { name: "Ravi", age: 22 }
 // ];
 
-//  let sorted= users.sort((a,b)=>a.age-b.age)
+//  users.sort((a,b)=>b.age-a.age)
+// console.log(users[0].age)
+// 9. Build a mini TODO app using arrays + objects.
+// let object ={
+//     name:prompt("enter your name "),
+//     class:prompt("enter your class"),
+//     section :prompt("enter your section"),
+//     description:prompt("enter any description")
+// }
+ 
+// let arrays=[{
+//     name:"Aman kumar",
+//     class:"7",
+//     section:"8",
+//     description:"no doubt i m the best ,i fight and i comeback and i will win "
+// },{
+//     name:"suman",
+//     class:"nhi pta",
+//     section:"i dont know ",
+//     method:"i dont want know"
+// }
+// ]
 
-// console.log(sorted)
-
-// 17. Find total price of shopping cart.
+// arrays.push(object)
 
 
-// 18. Group users by age.
+// 10. Build a shopping cart system with:
+
+// - add item
+
+// - remove item
+
+// - calculate total
 
 
-// 20. Explain difference between `map` and `forEach`
-// forEach() is used to iterate over an array and perform an action, while map() is used to transform array elements and return a new array.
+// - quantity update
+
+
+// let item =[
+//     {
+//         itemName:"flana ",
+//         price:5000,
+//         keepitem:true
+//     },
+//      {
+//         itemName:"dhimkana ",
+//         price:4000,
+//         keepitem:true
+//     }
+// ]
+
+
+// let additem={
+    
+//         itemName:"flana2 ",
+//         price:3000,
+//         keepitem:true
+    
+// }
+// item.push(additem)
+
+// item[0].keepitem=false
+
+// item = item.filter(product => product.keepitem);
+
+
+// console.log(item)
+// let total= 0 ;
+// let quantity= 0;
+// for(let key in item){
+// total=total+item[key].price
+// quantity =Number(key)+1
+// }
