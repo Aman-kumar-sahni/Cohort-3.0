@@ -86,13 +86,13 @@
 // }
 // console.log(JSON.stringify(secondarray))
 
-let arr=[1,2,3,4,5]
-let sum = 0;
-let mean=0;
-for (let i =0 ; i <=arr.length-1;i++){
-    sum = sum +arr[i]
+// let arr=[1,2,3,4,5]
+// let sum = 0;
+// let mean=0;
+// for (let i =0 ; i <=arr.length-1;i++){
+//     sum = sum +arr[i]
     
-}
-    mean = sum/arr.length
+// }
+//     mean = sum/arr.length
 
- console.log(sum,mean.toFixed(1))
+//  console.log(sum,mean.toFixed(1))

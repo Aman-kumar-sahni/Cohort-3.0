@@ -312,3 +312,126 @@
 // total=total+item[key].price
 // quantity =Number(key)+1
 // }
+
+
+// Scenario-Based Questions
+
+
+// // 1. You have an array of users. Return only active users.
+// let users = [
+//     {
+//         name: "Aman",
+//         active: true
+//     },
+//     {
+//         name: "Suman",
+//         active: false
+//     },
+//     {
+//         name: "Ravi",
+//         active: true
+//     },
+//     {
+//         name: "Priya",
+//         active: false
+//     }
+// ];
+// const newUser=users.filter(elem=>elem.active!==false)
+//   console.log(newUser)
+// 2. Calculate total revenue from orders array.
+let orders = [
+    {
+        orderId: 1,
+        revenue: 5000,
+        quantity:1
+    },
+    {
+        orderId: 2,
+        revenue: 2500,
+        quantity:3
+
+    },
+    {
+        orderId: 3,
+        revenue: 7000,
+        quantity:2
+
+    },
+    {
+        orderId: 4,
+        revenue: 1500,
+                quantity:1
+
+    }
+];
+let total =0;
+orders.reduce((acc ,num)=>{
+
+    
+
+},0)
+
+
+
+
+
+// 3. Find second largest number in array.
+// 4. Find missing number in array.
+// 5. Check whether two objects are equal.
+
+
+// # Logic Building Questions
+
+// 1. Rotate array by k positions.
+// 2. Find frequency of characters in string.
+// 3. Find longest word in sentence.
+// 4. Check if two strings are anagrams.
+// 5. Capitalize first letter of every word.
+// 6. Remove falsy values from array.
+// 7. Convert array into object.
+// 8. Convert object into array.
+// 9. Find duplicate elements.
+// 10. Merge two sorted arrays.
+
+// # Real World Practice
+
+// 1. Create authentication validation functions.
+// 2. Create OTP generator.
+// 3. Create password strength checker.
+// 4. Build leaderboard system.
+// 5. Create attendance management logic.
+
+// ---
+
+
+
+
+
+// # Advanced Functional Programming
+
+// 1. Implement compose function.
+// 2. Implement pipe function.
+// 3. Create custom event emitter.
+// 4. Build promise-like function logic.
+// 5. Create retry mechanism function.
+
+// # Final Challenge Questions
+
+// 1. Build complete Notes App logic.
+// 2. Build Student Dashboard logic.
+// 3. Build Quiz App data handling.
+// 4. Build E-commerce Cart System.
+// 5. Build Mini Netflix Watchlist System.
+
+// Ultra Advanced Practice
+// Build custom Array.prototype.map.
+// Build custom Array.prototype.filter.
+// Build custom Array.prototype.reduce.
+// Implement deep clone function.
+// Create student management system.
+// Create library management system.
+// Create expense tracker logic.
+// Build inventory management system.
+// Create function composition utility.
+// Build calculator using objects and methods.
+
