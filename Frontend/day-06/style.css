@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -51,4 +51,60 @@ main{
 .midcenter{
     background-color: chartreuse;
     grid-area:midcenter;
+} */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+main{
+    background-color: black;
+    height:100%;
+    width:100%;
+display: grid;
+grid-template-columns: 25% 25% 50%;
+grid-template-rows: 10% 60% 30%;
+grid-template-areas: 
+" navbar navbar  navbar  "
+"leftcenter   leftcenter  rightcenter"
+"leftbottom midbottom  rightcenter"
+;
+gap:10px
+}
+
+
+.navbar{
+    background-color: cyan;
+    grid-area: navbar;
+}
+.leftcenter{
+    background-color: blue;
+    grid-area: leftcenter;
+}
+.rightcenter{
+    background-color: burlywood;
+    grid-area: rightcenter;
+}
+.leftbottom{
+    background-color: chartreuse;
+        grid-area: leftbottom;
+
+}
+.midbottom{
+    background-color: deeppink;
+    grid-area:midbottom;
 }
