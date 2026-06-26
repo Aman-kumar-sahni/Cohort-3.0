@@ -1,2 +1,55 @@
  ALL ABOUT ARRAY 
- 
+
+
+                             important to revise    this all question is combination of arrays ,object,function 
+                             # Ultra Advanced Practice
+
+1. Build custom `Array.prototype.map`.
+2. Build custom `Array.prototype.filter`.
+3. Build custom `Array.prototype.reduce`.
+4. Implement deep clone function.
+5. Create student management system.
+6. Create library management system.
+7. Create expense tracker logic.
+8. Build inventory management system.
+9. Create function composition utility.
+10. Build calculator using objects and methods.
+
+1. Difference between:
+- shallow copy
+- deep copy
+
+---
+
+3. Find second largest number in array.
+4. Find missing number in array.
+5. Check whether two objects are equal.
+
+
+ this question is interview related 
+ 1. Implement compose function.
+2. Implement pipe function.
+3. Create custom event emitter.
+4. Build promise-like function logic.
+5. Create retry mechanism function.
+
+---
+
+
+
+Count frequency of elements.
+<!-- 
+```jsx
+let fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+```
+
+Expected Output:
+
+```jsx
+{
+  apple: 3,
+  banana: 2,
+  orange: 1
+} -->
+```
+#
