@@ -38,8 +38,19 @@
 // // console.log(document)
 
 
-let h1= React.createElement("h1",{},React.createElement("div",{},React.createElement("h1",{},"i m h1 inside div")))
-let div = document.querySelector("div")
-let root = ReactDOM.createRoot(div)
 
-console.log(root.render(h1))
+// let h1= React.createElement("h1",{},React.createElement("div",{},React.createElement("h1",{},"i m h1 inside div")))
+// let div = document.querySelector("div")
+// let root = ReactDOM.createRoot(div)
+
+// console.log(root.render(h1))  
+
+
+
+
+
+
+
+
+
+
