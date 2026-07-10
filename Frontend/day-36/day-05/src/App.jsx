@@ -113,34 +113,71 @@
 
 // export default App
 
-// this is optimized approach 
+// // this is optimized approach 
 
-import React from 'react'
-import { useState } from 'react'
+// import React from 'react'
+// import { useState } from 'react'
+
+// const App = () => {
+//   const [formdata,setFormData]=useState({})
+// function formHandler(e){
+//   setFormData({...formdata,[e.target.name]:e.target.value})
+// }
+//   return (
+//     <div className='bg-blue-300 h-70 w-90 flex flex-col  gap-1 justify-center items-center m-40 pt-2 rounded-2xl'>
+//       <h1>my name is -{formdata.name}</h1>
+//      <h1>my email is -{formdata.email}</h1>
+//           <h1>my password is -{formdata.password}</h1>
+
+//       <input 
+//       name="name"
+//       onChange={formHandler }className='border-2 '  type = "text" placeholder='EnterName'></input>
+//       <input 
+//       name="email"
+//       onChange={formHandler}  className='border-2 ' type = "text" placeholder='Enteremail'></input>
+//       <input 
+//       name="password" onChange={formHandler}className='border-2 '  type = "text" placeholder='Enterpassword'></input>
+
+// <button className='h-10 w-60 bg-emerald-500 border-2 rounded-xl m-2'>submit</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//  this is practise of optimised approach 
+import React, { useState } from 'react'
 
 const App = () => {
-  const [formdata,setFormData]=useState({})
-function formHandler(e){
-  setFormData({...formdata,[e.target.name]:e.target.value})
-}
+ const [formdata,setFormData]=useState({
+ });
+ function formHandler(e){
+   const   {name ,value}=e.target
+                setFormData({...formdata, [name]:value})
+
+ }
+
+
   return (
-    <div className='bg-blue-300 h-70 w-90 flex flex-col  gap-1 justify-center items-center m-40 pt-2 rounded-2xl'>
-      <h1>my name is -{formdata.name}</h1>
-     <h1>my email is -{formdata.email}</h1>
-          <h1>my password is -{formdata.password}</h1>
+    <div className='bg-black h-screen w-screen text-amber-50 flex flex-col justify-center items-center'>
+      <div className='bg-black h-auto w-auto text-amber-50'>
+        <h1>{formdata.name} </h1>
+      <h1>{formdata.username}</h1>
+      <h1>{formdata.email}</h1>
+      <h1>{formdata.password}</h1>
+      </div>
+      <div className=' bg-blue-200 h-70 w-90 flex justify-center items-center flex-col  gap-2'>
+    <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl' type="text" name="name" placeholder='Enter name '></input>
+        <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl' name="username" type="text" placeholder='Enter usename '></input>
+    <input onChange={formHandler} className='bg-amber-50 p-2 border border-2 text-black rounded-xl 'name="email" type="text" placeholder='Enter email '></input>
+    <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl'name="password" type="text" placeholder='Enter password '></input>
 
-      <input 
-      name="name"
-      onChange={formHandler }className='border-2 '  type = "text" placeholder='EnterName'></input>
-      <input 
-      name="email"
-      onChange={formHandler}  className='border-2 ' type = "text" placeholder='Enteremail'></input>
-      <input 
-      name="password" onChange={formHandler}className='border-2 '  type = "text" placeholder='Enterpassword'></input>
 
-<button className='h-10 w-60 bg-emerald-500 border-2 rounded-xl m-2'>submit</button>
+      </div>
     </div>
   )
 }
 
 export default App
+
+
