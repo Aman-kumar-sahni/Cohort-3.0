@@ -182,81 +182,167 @@
 
 
 // this is brute force approach 
+// import React, { useState } from "react";
+
+// const App = () => {
+
+//   const [formData,setFormData]=useState({
+  
+//   })
+//   function formHandler(e){
+//   let {name ,value} =e.target
+//              setFormData(     {...formData,[name]:value})
+
+//   }
+
+//   return (
+//     <div className="min-h-screen bg-amber-100 flex items-center justify-center  gap-4">
+//      <div className="w-96 bg-white rounded-xl shadow-lg p-6">
+//   <h2 className="text-2xl font-bold text-center mb-4">
+//     User Details
+//   </h2>
+
+//   <div className="flex flex-col gap-3">
+//     <div className="border rounded-lg p-3">
+//       <p className="text-gray-500 text-sm">Name</p>
+//       <h1 className="text-lg font-semibold">{formData.name}</h1>
+//     </div>
+
+//     <div className="border rounded-lg p-3">
+//       <p className="text-gray-500 text-sm">Email</p>
+//       <h1 className="text-lg font-semibold">{formData.email}</h1>
+//     </div>
+
+//     <div className="border rounded-lg p-3">
+//       <p className="text-gray-500 text-sm">Password</p>
+//       <h3 className="text-lg font-semibold">{formData.password}</h3>
+//     </div>
+//   </div>
+// </div>
+//       <div className="w-96 bg-white rounded-xl shadow-lg p-6">
+//         <h1 className="text-3xl font-bold text-center mb-6">
+//           Register
+//         </h1>
+
+//         <form className="flex flex-col gap-4">
+//           <input onChange={formHandler}
+//             type="text"
+//             name="name"
+//             placeholder="Enter your name"
+//             className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+//           />
+
+//           <input onChange={formHandler}
+
+//             type="email"
+//             name="email"
+//             placeholder="Enter your email"
+//             className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+//           />
+
+//           <input
+//           onChange={formHandler}
+//             type="password"
+//             name="password"
+//             placeholder="Enter your password"
+//             className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+//           />
+
+//           <button
+//         onClick={()=>{
+//         }}
+//             type="submit"
+//             className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 cursor-pointer"
+//           >
+//             Register
+//           </button>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+
 import React, { useState } from "react";
 
 const App = () => {
+  const [formData, setFormData] = useState({
+  });
 
-  const [formData,setFormData]=useState({
-  
-  })
-  function formHandler(e){
-  let {name ,value} =e.target
-             setFormData(     {...formData,[name]:value})
+  function handleChange(e) {
+    const { name, value } = e.target;
 
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   }
 
   return (
-    <div className="min-h-screen bg-amber-100 flex items-center justify-center  gap-4">
-     <div className="w-96 bg-white rounded-xl shadow-lg p-6">
-  <h2 className="text-2xl font-bold text-center mb-4">
-    User Details
-  </h2>
-
-  <div className="flex flex-col gap-3">
-    <div className="border rounded-lg p-3">
-      <p className="text-gray-500 text-sm">Name</p>
-      <h1 className="text-lg font-semibold">{formData.name}</h1>
-    </div>
-
-    <div className="border rounded-lg p-3">
-      <p className="text-gray-500 text-sm">Email</p>
-      <h1 className="text-lg font-semibold">{formData.email}</h1>
-    </div>
-
-    <div className="border rounded-lg p-3">
-      <p className="text-gray-500 text-sm">Password</p>
-      <h3 className="text-lg font-semibold">{formData.password}</h3>
-    </div>
-  </div>
-</div>
-      <div className="w-96 bg-white rounded-xl shadow-lg p-6">
+    <div className="min-h-screen bg-amber-100 flex items-center justify-center gap-10">
+      {/* Register Card */}
+      <div className="w-96 bg-white rounded-2xl shadow-lg p-6">
         <h1 className="text-3xl font-bold text-center mb-6">
           Register
         </h1>
 
-        <form className="flex flex-col gap-4">
-          <input onChange={formHandler}
+        <div className="flex flex-col gap-4">
+          <input
             type="text"
             name="name"
-            placeholder="Enter your name"
-            className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
-          />
-
-          <input onChange={formHandler}
-
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+            placeholder="Enter Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="border p-3 rounded-lg"
           />
 
           <input
-          onChange={formHandler}
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="border p-3 rounded-lg"
           />
 
-          <button
-        onClick={()=>{
-        }}
-            type="submit"
-            className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 cursor-pointer"
-          >
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            value={formData.password}
+            onChange={handleChange}
+            className="border p-3 rounded-lg"
+          />
+
+          <button className="bg-amber-700 text-white py-3 rounded-lg cursor-pointer">
             Register
           </button>
-        </form>
+        </div>
+      </div>
+
+      {/* Preview Card */}
+      <div className="w-96 bg-white rounded-2xl shadow-lg p-6">
+        <h1 className="text-3xl font-bold text-center mb-6">
+          User Details
+        </h1>
+
+        <div className="space-y-4">
+          <div className="border p-3 rounded-lg">
+            <p className="text-gray-500">Name</p>
+            <h2>{formData.name || "Not Entered"}</h2>
+          </div>
+
+          <div className="border p-3 rounded-lg">
+            <p className="text-gray-500">Email</p>
+            <h2>{formData.email || "Not Entered"}</h2>
+          </div>
+
+          <div className="border p-3 rounded-lg">
+            <p className="text-gray-500">Password</p>
+            <h2>{formData.password || "Not Entered"}</h2>
+          </div>
+        </div>
       </div>
     </div>
   );
