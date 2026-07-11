@@ -145,39 +145,121 @@
 
 // export default App
 
-//  this is practise of optimised approach 
-import React, { useState } from 'react'
+// //  this is practise of optimised approach 
+// import React, { useState } from 'react'
+
+// const App = () => {
+//  const [formdata,setFormData]=useState({
+//  });
+//  function formHandler(e){
+//    const   {name ,value}=e.target
+//                 setFormData({...formdata, [name]:value})
+
+//  }
+
+
+//   return (
+//     <div className='bg-black h-screen w-screen text-amber-50 flex flex-col justify-center items-center'>
+//       <div className='bg-black h-auto w-auto text-amber-50'>
+//         <h1>{formdata.name} </h1>
+//       <h1>{formdata.username}</h1>
+//       <h1>{formdata.email}</h1>
+//       <h1>{formdata.password}</h1>
+//       </div>
+//       <div className=' bg-blue-200 h-70 w-90 flex justify-center items-center flex-col  gap-2'>
+//     <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl' type="text" name="name" placeholder='Enter name '></input>
+//         <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl' name="username" type="text" placeholder='Enter usename '></input>
+//     <input onChange={formHandler} className='bg-amber-50 p-2 border border-2 text-black rounded-xl 'name="email" type="text" placeholder='Enter email '></input>
+//     <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl'name="password" type="text" placeholder='Enter password '></input>
+
+
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// this is brute force approach 
+import React, { useState } from "react";
 
 const App = () => {
- const [formdata,setFormData]=useState({
- });
- function formHandler(e){
-   const   {name ,value}=e.target
-                setFormData({...formdata, [name]:value})
 
- }
+  const [formData,setFormData]=useState({
+  
+  })
+  function formHandler(e){
+  let {name ,value} =e.target
+             setFormData(     {...formData,[name]:value})
 
+  }
 
   return (
-    <div className='bg-black h-screen w-screen text-amber-50 flex flex-col justify-center items-center'>
-      <div className='bg-black h-auto w-auto text-amber-50'>
-        <h1>{formdata.name} </h1>
-      <h1>{formdata.username}</h1>
-      <h1>{formdata.email}</h1>
-      <h1>{formdata.password}</h1>
-      </div>
-      <div className=' bg-blue-200 h-70 w-90 flex justify-center items-center flex-col  gap-2'>
-    <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl' type="text" name="name" placeholder='Enter name '></input>
-        <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl' name="username" type="text" placeholder='Enter usename '></input>
-    <input onChange={formHandler} className='bg-amber-50 p-2 border border-2 text-black rounded-xl 'name="email" type="text" placeholder='Enter email '></input>
-    <input onChange={formHandler} className='bg-amber-50 p-2 border border-2  text-black rounded-xl'name="password" type="text" placeholder='Enter password '></input>
+    <div className="min-h-screen bg-amber-100 flex items-center justify-center  gap-4">
+     <div className="w-96 bg-white rounded-xl shadow-lg p-6">
+  <h2 className="text-2xl font-bold text-center mb-4">
+    User Details
+  </h2>
 
+  <div className="flex flex-col gap-3">
+    <div className="border rounded-lg p-3">
+      <p className="text-gray-500 text-sm">Name</p>
+      <h1 className="text-lg font-semibold">{formData.name}</h1>
+    </div>
 
+    <div className="border rounded-lg p-3">
+      <p className="text-gray-500 text-sm">Email</p>
+      <h1 className="text-lg font-semibold">{formData.email}</h1>
+    </div>
+
+    <div className="border rounded-lg p-3">
+      <p className="text-gray-500 text-sm">Password</p>
+      <h3 className="text-lg font-semibold">{formData.password}</h3>
+    </div>
+  </div>
+</div>
+      <div className="w-96 bg-white rounded-xl shadow-lg p-6">
+        <h1 className="text-3xl font-bold text-center mb-6">
+          Register
+        </h1>
+
+        <form className="flex flex-col gap-4">
+          <input onChange={formHandler}
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+          />
+
+          <input onChange={formHandler}
+
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+          />
+
+          <input
+          onChange={formHandler}
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            className="border border-gray-400 rounded-lg p-3 outline-none focus:border-blue-500"
+          />
+
+          <button
+        onClick={()=>{
+        }}
+            type="submit"
+            className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 cursor-pointer"
+          >
+            Register
+          </button>
+        </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
-
-
+export default App;
