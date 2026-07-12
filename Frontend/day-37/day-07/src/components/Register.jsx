@@ -1,31 +1,41 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Register = ({ setToggle ,setUser}) => {
-  const [formdata, setFormData] = useState({})
-
+const Register = ({ setToggle,setUser }) => {
+  
+  const [formdata, setFormData] = useState({
+    username:"",
+    email:"",
+    password:""
+  })
   function formHandler(e) {
     let { name, value } = e.target
     setFormData({ ...formdata, [name]: value })
 
-  }
-  function submitHandler(e){
-e.preventDefault()
-setUser((prev)=>[...prev,formdata])
-setFormData({
-  username:"",
-  email:"",
-  password:""
-})
-  }
 
+  }
+  
+function submitHandler(e){
+  e.preventDefault()
+
+  setFormData({
+    username:"",
+    email:"",
+    password:"",
+    
+  })
+
+  
+setUser((prev)=>[...prev,formdata])
+
+}
 
 
   return (
 
     <div className='bg-amber-50 h-90 w-90 rounded-xl flex flex-col gap-2 pl-9 pt-10 text-black'>
       <h1 className='font-bold text-2xl text-amber-950'>Register</h1>
-      <form onSubmit={submitHandler} className='flex flex-col gap-3 pt-5 '>
+      <form  onSubmit={submitHandler} className='flex flex-col gap-3 pt-5 '>
         <input required  value={formdata.username} onChange={formHandler} name="username" type="text" placeholder='Enter Username' className='h-10 w-70 border border-2 border-black rounded-xl p-2 border-amber-950'></input>
 
         <input required value={formdata.email}onChange={formHandler} name="email" type="text" placeholder='Enter email' className='h-10 w-70 border border-2 border-black rounded-xl p-2 border-amber-950'></input>

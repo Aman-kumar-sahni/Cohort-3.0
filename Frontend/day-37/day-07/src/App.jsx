@@ -7,16 +7,14 @@ const App = () => {
   const [toggle, setToggle] = useState(false)
 const [user ,setUser]=useState([])
 
+console.log(user)
+
 
   return (
     <div className='bg-black h-screen w-screen text-amber-50  flex justify-center items-center'>
 
-      {toggle ? <Login setToggle={setToggle}  setUser={setUser}/> : <Register setToggle={setToggle} setUser={setUser} />}
-      {
-        user.map((elem)=>{
-return <UserCard elem ={elem}/>
-        })
-      }
+      {toggle ? <Login setToggle={setToggle}  /> : <Register setToggle={setToggle} setUser={setUser} />}
+
 
     </div>
   )
