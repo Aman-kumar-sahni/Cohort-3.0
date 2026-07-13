@@ -8,7 +8,7 @@ const Navbar = ({setToggle}) => {
             <h1>Home</h1>
             <h1>About</h1>
             <h1>Contact</h1>
-
+        
         </div>
 <button onClick={()=>{
     setToggle((prev)=>!prev)
