@@ -104,7 +104,7 @@ const Form = ({ setUsers, setShowForm }) => {
     reset();
 
     // Form hide karke User Cards show karo
-    setShowForm(false);
+    setShowForm((prev)=>!prev);
   }
 
   return (
