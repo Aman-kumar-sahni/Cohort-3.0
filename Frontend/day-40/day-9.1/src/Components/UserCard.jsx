@@ -1,4 +1,4 @@
-const UserCard = ({elem}) => {
+const UserCard = ({elem,idx,deleteHandler,setToggle,setUpdatedData}) => {
   return (
     <div className="w-72 rounded-2xl border border-gray-200 bg-white p-4 shadow-lg transition hover:shadow-xl">
       {/* Profile Image */}
@@ -21,6 +21,10 @@ const UserCard = ({elem}) => {
       {/* Buttons */}
       <div className="mt-6 flex gap-3">
         <button
+        onClick={()=>{
+setToggle((prev)=>!prev)
+setUpdatedData(elem)
+        }}
           type="button"
           className="flex-1 rounded-lg bg-blue-600 py-2.5 text-sm font-semibold text-white transition duration-200 hover:bg-blue-700 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
@@ -28,6 +32,9 @@ const UserCard = ({elem}) => {
         </button>
 
         <button
+        onClick={()=>{
+          deleteHandler(idx)
+        }}
           type="button"
           className="flex-1 rounded-lg bg-red-600 py-2.5 text-sm font-semibold text-white transition duration-200 hover:bg-red-700 active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-400"
         >

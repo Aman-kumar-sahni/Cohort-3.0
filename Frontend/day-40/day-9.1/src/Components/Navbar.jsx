@@ -2,9 +2,9 @@ import React from 'react'
 
 const Navbar = ({setToggle}) => {
   return (
-    <div className='bg-emerald-400 h-12 w-full flex flex-row justify-between items-center p-5 rounded-xl  '>
-      <h1>Navbar</h1>
-      <div className='flex flex-row gap-5 justify-center items-center '>
+    <div className='bg-blue-500 h-12 w-full flex flex-row justify-between items-center p-5 rounded-xl  '>
+      <h1 className='font-bold'>Navbar</h1>
+      <div className='flex flex-row gap-5 justify-center items-center font-bold '>
         <p>Home</p>
         <p>About</p>
         <p>Contact</p>

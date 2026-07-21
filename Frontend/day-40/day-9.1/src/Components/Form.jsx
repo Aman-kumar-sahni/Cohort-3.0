@@ -1,22 +1,60 @@
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-const SignupForm = ({setData,setToggle}) => {
+import { nanoid } from 'nanoid'
+
+const SignupForm = ({ setData, setToggle, data, updatedData ,setUpdatedData}) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm(
-{  
-  mode: "onChange",
-}  );
+    {
+      mode: "onChange",
+      defaultValues: updatedData
+    });
 
   function submitHandler(user) {
-    setData((prev)=>[...prev,user])
-    reset()
-   setToggle((prev)=>!prev)
 
+    if (updatedData) {
+
+      const updatedUsers = data.map((val) =>
+        val.id === updatedData.id
+          ? { ...user, id: updatedData.id }
+          : val
+      );
+
+      setData(updatedUsers);
+
+      localStorage.setItem(
+        "user1",
+        JSON.stringify(updatedUsers)
+      );
+
+      setUpdatedData(null);
+
+    } else {
+
+      const newUsers = [
+        ...data,
+        {
+          ...user,
+          id: nanoid(),
+        },
+      ];
+
+      setData(newUsers);
+
+      localStorage.setItem(
+        "user1",
+        JSON.stringify(newUsers)
+      );
+    }
+
+    reset();
+
+    setToggle(true);
   }
   return (
     <div className="w-80 h-auto gap-5   rounded-2xl bg-amber-50 p-4 shadow-lg flex flex-col ml-130">
@@ -107,24 +145,24 @@ const SignupForm = ({setData,setToggle}) => {
         <div>
 
           <input
-{...register("image", {
-    required: "Image URL is required",
+            {...register("image", {
+              required: "Image URL is required",
 
-  })}
+            })}
             type="url"
             id="image"
             placeholder="https://example.com/image.jpg"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           />
         </div>
-{errors.image && (
-  <p className="mt-1 text-sm text-red-500">
-    {errors.image.message}
-  </p>
-)}
+        {errors.image && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.image.message}
+          </p>
+        )}
         {/* Submit Button */}
         <button
-      
+
           type="submit"
           className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700"
         >
