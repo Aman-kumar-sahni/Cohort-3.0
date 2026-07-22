@@ -7,8 +7,9 @@ const Product = ({products}) => {
   return (
     <div className='flex flex-col grid grid-cols-5 '>
     {products.map((elem)=>{
+      
       let intcard =cartItems.find((val)=>val.id===elem.id)
-      console.log(intcard)
+      
         return <ProductCard key = {elem.id}product={elem} />
     })}
     </div>

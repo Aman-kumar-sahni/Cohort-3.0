@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserCard = ({ users ,deleteHandler}) => {
+const UserCard = ({ users ,deleteHandler,updateHandler}) => {
   if (users.length === 0) {
     return (
       <div className="flex justify-center mt-10">
@@ -41,7 +41,11 @@ const UserCard = ({ users ,deleteHandler}) => {
 
             {/* Action Buttons */}
             <div className="flex gap-3 mt-3">
-              <button className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white py-2 rounded-lg font-medium transition">
+              <button onClick={()=>{
+                updateHandler(index)
+              
+
+              }}className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white py-2 rounded-lg font-medium transition">
                 update
               </button>
 

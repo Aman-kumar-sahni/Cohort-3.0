@@ -17,7 +17,6 @@ const App = () => {
   catch(error){
     console.log("error in api get => " ,error.message)
   }
-
 }
   useEffect(() => {
     getData()

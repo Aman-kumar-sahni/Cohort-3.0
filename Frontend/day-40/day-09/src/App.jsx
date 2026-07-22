@@ -22,7 +22,11 @@ setUsers(newUser)
 localStorage.setItem("users",JSON.stringify(newUser))
 }
 
-
+function updateHandler(index){
+  let updateHandler =users.filter((elem,idx)=>idx===index)
+  
+  
+}
  
 
   return (
@@ -42,7 +46,8 @@ localStorage.setItem("users",JSON.stringify(newUser))
       ):(
          <div className="max-w-7xl mx-auto p-8 ">
         <UserCard users={users}            deleteHandler={deleteHandler}
-         updateHandler={updateHandler}
+        updateHandler={updateHandler}
+         
 
  />
       </div>

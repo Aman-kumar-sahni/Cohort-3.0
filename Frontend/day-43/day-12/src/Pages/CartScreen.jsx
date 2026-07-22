@@ -18,7 +18,9 @@ const CartScreen = () => {
   return (
     <div className="p-6">
       <div className="grid grid-cols-5 gap-6">
+
         {cartItems.map((item) => (
+          
           <CartCard key={item.id} product={item} />
         ))}
       </div>
