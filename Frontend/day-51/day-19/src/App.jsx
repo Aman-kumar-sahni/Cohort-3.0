@@ -1,10 +1,11 @@
 import { useDispatch,useSelector } from "react-redux";
 import { decrement, increment, incrementByAmount } from "./store/CounterSlice";
-
+import { useState } from "react";
 function App() {
 
  const dispatch = useDispatch()
  const {count}= useSelector((state)=>(state.counter))
+ const [inputValue,setInputValue]=useState (0)
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#0d0d0d] px-5">
       <div className="w-full max-w-md rounded-3xl border border-white/10 bg-[#181818] p-8 shadow-xl">
@@ -44,15 +45,16 @@ function App() {
           >
             Decrement
           </button>
-
+        
+<input onChange={(e)=>{setInputValue(e.target.value)}} className="" placeholder="enter input Amount "></input>
           <button
             onClick={() => {
-                            dispatch(incrementByAmount(7))
+                            dispatch(incrementByAmount(Number(inputValue)))
 
             }}
             className="h-12 w-full rounded-xl bg-blue-500 font-semibold text-white transition hover:bg-blue-600"
           >
-            Increment By Amount (+5)
+            Increment By Amount 
           </button>
 
         </div>
