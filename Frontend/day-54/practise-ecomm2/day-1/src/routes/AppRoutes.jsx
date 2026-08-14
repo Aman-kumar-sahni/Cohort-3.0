@@ -12,17 +12,25 @@ import Orders from '../features/orders/ui/Orders'
 import Home from '../shared/ui/Home'
 import { hydrateUser } from '../features/auth/api/authApi'
 import { useDispatch } from 'react-redux'
-import { addUser } from '../features/auth/state/authSlice'
+import { addUser, removeUser } from '../features/auth/state/authSlice'
 
 const AppRoutes = () => {
     const dispatch = useDispatch()
  useEffect(() => {
   (async () => {
-    const response = await hydrateUser();
-    
-dispatch(addUser(response))
+    try {
+      const response = await hydrateUser();
+
+      if (response) {
+        dispatch(addUser(response));
+      } else {
+        dispatch(removeUser());
+      }
+    } catch (error) {
+      dispatch(removeUser());
+    }
   })();
-}, []);
+}, [dispatch]);
     const router = createBrowserRouter([
         {
 element:<PublicProtected/>,
