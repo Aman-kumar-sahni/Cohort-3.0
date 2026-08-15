@@ -1,24 +1,46 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { hydrateUserAction, loginUserAction } from "./authActions";
 
  const authSLice = createSlice({
     name:"auth",
     initialState:{
         user:null,
         isAuthenticated:false,
-        isLoading:true,
+        isLoading:false,
         
     },
-    reducers:{
-        addUser:(state,action)=>{
-            state.user= action.payload;
+
+    extraReducers:(builder)=>{
+        builder
+        .addCase(loginUserAction.pending,(state,action)=>{
+state.isLoading=true;
+        })
+        .addCase(loginUserAction.fulfilled,(state,action)=>{
+state.isLoading=false;
 state.isAuthenticated=true;
-state.isLoading=false
-        },
-    removeUser: (state) => {
-  state.user = null;
-  state.isAuthenticated = false;
-  state.isLoading = false;
-},
+state.user=action.payload
+        })
+        .addCase(loginUserAction.rejected,(state,action)=>{
+            state.isLoading=false;
+
+        })
+        .addCase(hydrateUserAction.pending,(state,action)=>{
+state.isLoading=true
+
+        }
+    )
+    .addCase(hydrateUserAction.fulfilled,(state,action)=>{
+        state.user=action.payload
+
+state.isAuthenticated=true;
+state.isLoading=false;
+    })
+    .addCase(hydrateUserAction.rejected,(state,action)=>{
+        state.isLoading=false
+
+    })
+
+
     }
 })
 
