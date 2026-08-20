@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { productApi } from "../api/ProductApi";
+import { productApi, productCategory } from "../api/ProductApi";
 
 export const useAllProducts = () => {
   const {
@@ -19,3 +19,13 @@ export const useAllProducts = () => {
     error,
   };
 };
+
+
+export const useProductByCategory= ()=>{
+  const {data,isPending,error,isError}=useQuery({
+    queryKey:["category"],
+    queryFn:productCategory,
+  })
+  return {data,isPending,isError,error}
+
+}

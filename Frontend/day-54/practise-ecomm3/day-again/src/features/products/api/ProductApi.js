@@ -4,12 +4,23 @@ export const productApi  =async ()=>{
     try {
         
   const res = await api.get("/products");
-  console.log(res.data.products)
         return res.data.products
     } catch (error) {
         console.log(error.message)
         
     }
 
+}
+
+export const productCategory= async ()=>{
+    try {
+        const res= await api.get("/products/category-list")
+
+    return res.data
+
+    } catch (error) {
+        console.log(error.message)
+        
+    }
 }
 

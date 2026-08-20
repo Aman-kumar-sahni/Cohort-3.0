@@ -1,7 +1,13 @@
 import React from "react";
 import { Search, ChevronDown } from "lucide-react";
+import { useProductByCategory } from "../../hooks/useAllProducts";
 
 const FilterProducts = () => {
+  
+
+const {data,isPending,error}=useProductByCategory()
+if (isPending)return <h1>Loading...</h1>
+
   return (
     <div className="mb-6 w-full rounded-2xl border border-black/10 bg-white p-4 shadow-sm sm:p-5">
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
@@ -79,16 +85,10 @@ const FilterProducts = () => {
               Select Category
             </option>
 
-            <option value="beauty">Beauty</option>
-            <option value="fragrances">Fragrances</option>
-            <option value="furniture">Furniture</option>
-            <option value="groceries">Groceries</option>
-            <option value="laptops">Laptops</option>
-            <option value="mens-shirts">Men's Shirts</option>
-            <option value="mens-shoes">Men's Shoes</option>
-            <option value="smartphones">Smartphones</option>
-            <option value="womens-dresses">Women's Dresses</option>
-            <option value="womens-shoes">Women's Shoes</option>
+          {data.map((elem,idx)=>{
+            
+            return <option value={elem} key ={idx}>{elem}</option>
+          })}
           </select>
 
           <ChevronDown
