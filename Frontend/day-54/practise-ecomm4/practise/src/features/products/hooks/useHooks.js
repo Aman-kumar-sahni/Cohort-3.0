@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import {
+  getProducts,
   getAllCategories,
-  getAllProducts,
 } from "../api/productApi";
 
-export const useAllProducts = () => {
+export const useProducts = () => {
   const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
 
   useEffect(() => {
@@ -20,20 +21,28 @@ export const useAllProducts = () => {
   const {
     data,
     isPending,
-    error,
     isError,
+    error,
   } = useQuery({
-    queryKey: ["products", debouncedSearch],
-    queryFn: () => getAllProducts(debouncedSearch),
+    queryKey: ["products", debouncedSearch, category],
+    queryFn: () =>
+      getProducts({
+        search: debouncedSearch,
+        category,
+      }),
   });
 
   return {
-    search,
-    setSearch,
     data,
     isPending,
-    error,
     isError,
+    error,
+
+    search,
+    setSearch,
+
+    category,
+    setCategory,
   };
 };
 

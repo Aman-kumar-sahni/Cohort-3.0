@@ -1,11 +1,15 @@
 import { api } from "../../../config/api";
 
-export const getAllProducts = async (search) => {
-  const value = search
-    ? `/products/search?q=${encodeURIComponent(search)}`
-    : "/products";
+export const getProducts = async ({ search, category }) => {
+  let url = "/products";
 
-  const res = await api.get(value);
+  if (category) {
+    url = `/products/category/${category}`;
+  } else if (search) {
+    url = `/products/search?q=${encodeURIComponent(search)}`;
+  }
+
+  const res = await api.get(url);
 
   return res.data.products;
 };
