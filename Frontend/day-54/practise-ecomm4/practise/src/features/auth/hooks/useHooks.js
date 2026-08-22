@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form"
-import { loginHandleApi } from "../api/authApi";
 import { useDispatch } from "react-redux";
-import { addUser } from "../state/authSlice";
+import { loginUserAction } from "../state/authAction";
 
 export const useHooks =()=>{
   const dispatch = useDispatch()
@@ -17,9 +16,9 @@ const {
 
 const loginHandle=async (data)=>{
   
-const res = await loginHandleApi(data)
-localStorage.setItem("accessToken",res.accessToken)
-dispatch(addUser(res))
+// const res = await loginHandleApi(data)
+// localStorage.setItem("accessToken",res.accessToken)
+dispatch(loginUserAction(data))
 
 reset()
 }

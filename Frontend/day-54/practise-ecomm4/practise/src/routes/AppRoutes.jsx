@@ -17,10 +17,9 @@ import Home from "../shared/ui/Home";
 import Cart from "../features/cart/ui/Cart";
 import Products from "../features/products/ui/Products";
 import Orders from "../features/orders/ui/Orders";
-import { hydrateUserApi } from "../features/auth/api/authApi";
 import { useDispatch } from "react-redux";
-import { addUser } from "../features/auth/state/authSlice";
 import About from "../shared/ui/About";
+import { hydrateUserAction } from "../features/auth/state/authAction";
 
 const AppRoutes = () => {
 const dispatch = useDispatch();
@@ -28,9 +27,8 @@ const dispatch = useDispatch();
 useEffect(() => {
   const hydrateUser = async () => {
     try {
-      const res = await hydrateUserApi();
 
-      dispatch(addUser(res));
+      dispatch(hydrateUserAction());
     } catch (error) {
       console.log(error.message);
     }
