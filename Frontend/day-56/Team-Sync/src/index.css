@@ -1,1 +1,290 @@
+
 @import "tailwindcss";
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+.light {
+  /* ---------- Background & Surfaces ---------- */
+  --background: #fcf8ff;
+  --surface: #fcf8ff;
+  --surface-dim: #dbd8e4;
+  --surface-bright: #fcf8ff;
+
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f5f2fe;
+  --surface-container: #efecf8;
+  --surface-container-high: #e9e6f3;
+  --surface-container-highest: #e4e1ed;
+
+  /* ---------- Text ---------- */
+  --foreground: #1b1b23;
+  --text-primary: #1b1b23;
+  --text-secondary: #464554;
+  --text-muted: #767586;
+
+  /* ---------- Borders ---------- */
+  --border: #c7c4d7;
+  --border-strong: #767586;
+
+  /* ---------- Primary ---------- */
+  --primary: #4648d4;
+  --on-primary: #ffffff;
+
+  --primary-container: #6063ee;
+  --on-primary-container: #fffbff;
+
+  /* ---------- Secondary ---------- */
+  --secondary: #505f76;
+  --on-secondary: #ffffff;
+
+  --secondary-container: #d0e1fb;
+  --on-secondary-container: #54647a;
+
+  /* ---------- Tertiary ---------- */
+  --tertiary: #904900;
+  --on-tertiary: #ffffff;
+
+  --tertiary-container: #b55d00;
+  --on-tertiary-container: #fffbff;
+
+  /* ---------- Semantic ---------- */
+  --success: #4d7c5f;
+  --warning: #b7791f;
+  --error: #ba1a1a;
+
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+
+  /* ---------- Inverse ---------- */
+  --inverse-surface: #303038;
+  --inverse-on-surface: #f2effb;
+  --inverse-primary: #c0c1ff;
+
+  /* ---------- Typography ---------- */
+  --font-family: "Inter", sans-serif;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ---------- Spacing ---------- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-card:
+    0 1px 3px rgba(0, 0, 0, 0.04);
+
+  --shadow-floating:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+  --shadow-modal:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+:root {
+  /* ---------- Background & Surfaces ---------- */
+  --background: #141218;
+  --surface: #141218;
+  --surface-dim: #141218;
+  --surface-bright: #3b383e;
+
+  --surface-container-lowest: #0f0d13;
+  --surface-container-low: #1d1b20;
+  --surface-container: #211f24;
+  --surface-container-high: #2b292f;
+  --surface-container-highest: #36343a;
+
+  /* ---------- Text ---------- */
+  --foreground: #e6e0e9;
+  --text-primary: #e6e0e9;
+  --text-secondary: #cbc4d2;
+  --text-muted: #948e9c;
+
+  /* ---------- Borders ---------- */
+  --border: #494551;
+  --border-strong: #948e9c;
+
+  /* ---------- Primary ---------- */
+  --primary: #cfbcff;
+  --on-primary: #381e72;
+
+  --primary-container: #6750a4;
+  --on-primary-container: #e0d2ff;
+
+  /* ---------- Secondary ---------- */
+  --secondary: #cdc0e9;
+  --on-secondary: #342b4b;
+
+  --secondary-container: #4d4465;
+  --on-secondary-container: #bfb2da;
+
+  /* ---------- Tertiary ---------- */
+  --tertiary: #e7c365;
+  --on-tertiary: #3e2e00;
+
+  --tertiary-container: #c9a74d;
+  --on-tertiary-container: #503d00;
+
+  /* ---------- Semantic ---------- */
+  --success: #81c995;
+  --warning: #e7c365;
+  --error: #ffb4ab;
+
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  /* ---------- Inverse ---------- */
+  --inverse-surface: #e6e0e9;
+  --inverse-on-surface: #322f35;
+  --inverse-primary: #6750a4;
+
+  /* ---------- Shadows ---------- */
+  --shadow-card:
+    0 1px 3px rgba(0, 0, 0, 0.20);
+
+  --shadow-floating:
+    0 10px 25px -5px rgba(0, 0, 0, 0.30);
+
+  --shadow-modal:
+    0 10px 25px -5px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
+html {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--background);
+  color: var(--foreground);
+
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
