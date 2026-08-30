@@ -1,10 +1,19 @@
-import React from 'react'
-import Navbar from '../../shared/ui/components/Navbar'
-import HomePage from '../../features/dashboard/ui/HomePage'
-import { Outlet } from 'react-router'
+import React from "react";
+import { Navigate, Outlet } from "react-router";
+import { useSelector } from "react-redux";
 
 const MainProtected = () => {
-  return  <Outlet/>
-}
+  const { employee, isLoading } = useSelector((state) => state.auth);
 
-export default MainProtected
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (!employee) {
+    return <Navigate to="/" replace />;
+  }
+
+  return <Outlet />;
+};
+
+export default MainProtected;
