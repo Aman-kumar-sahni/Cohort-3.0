@@ -3,7 +3,7 @@ import React from 'react'
 const Departments = () => {
   return (
     <div>
-      This is departments page 
+      This is Departments Page
     </div>
   )
 }

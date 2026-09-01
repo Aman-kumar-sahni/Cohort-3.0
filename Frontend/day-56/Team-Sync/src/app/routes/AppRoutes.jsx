@@ -9,14 +9,16 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import Login from "../../features/auth/ui/Login";
 import Register from "../../features/auth/ui/Register";
 
-import HomePage from "../../features/dashboard/ui/HomePage";
-import Employee from "../../features/employee/ui/Employee";
-import Departments from "../../features/departments/ui/Departments";
+
 
 import PublicProtected from "./PublicProtected";
 import MainProtected from "./MainProtected";
 
 import { currentEmployee } from "../../features/auth/state/auth/authAction";
+import { commonRoutes } from "./commonRoutes";
+import RoleBasedRoute from "./RoleBasedRoute";
+import { adminRoutes } from "./adminRoutes";
+import { employeeRoutes } from "./employeeRoutes";
 
 const AppRoutes = () => {
   const dispatch = useDispatch();
@@ -52,19 +54,14 @@ const AppRoutes = () => {
         {
           path: "/home",
           element: <DashboardLayout />,
-          children: [
-            {
-              index: true,
-              element: <HomePage />,
-            },
-            {
-              path: "employee",
-              element: <Employee />,
-            },
-            {
-              path: "departments",
-              element: <Departments />,
-            },
+          children: [...commonRoutes,{
+            element:<RoleBasedRoute allowedRoles={"admin"}/>,
+            children:adminRoutes,
+            
+          },{
+            element:<RoleBasedRoute allowedRoles={"employee"}/>,
+            children:employeeRoutes,
+          }
           ],
         },
       ],
