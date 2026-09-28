@@ -16,6 +16,7 @@ const AsideNav = () => {
   
 const {employee} =useSelector((state)=>state.auth)
 const navigations = employee?.role==="admin"? adminNavigation:employeeNavigation;
+
   return (
     <aside className="hidden min-h-screen w-64 shrink-0 border-r border-[var(--border)] bg-[var(--surface-container-lowest)] lg:flex lg:flex-col">
       {/* Logo */}

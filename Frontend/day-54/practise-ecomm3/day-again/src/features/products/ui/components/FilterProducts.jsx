@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Search, ChevronDown } from "lucide-react";
 import { useProductByCategory } from "../../hooks/useAllProducts";
 
-const FilterProducts = () => {
+const FilterProducts = ({search,setSearch}) => {
   
-
 const {data,isPending,error}=useProductByCategory()
 if (isPending)return <h1>Loading...</h1>
 
@@ -28,6 +27,10 @@ if (isPending)return <h1>Loading...</h1>
           />
 
           <input
+          value={search}
+          onChange={(e)=>{
+            setSearch(e.target.value)
+          }}
             type="text"
             placeholder="Search products..."
             className="

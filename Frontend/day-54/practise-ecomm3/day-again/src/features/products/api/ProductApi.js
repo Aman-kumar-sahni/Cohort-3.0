@@ -24,3 +24,21 @@ export const productCategory= async ()=>{
     }
 }
 
+export const searchApi =async(search)=>{
+    try {
+        const res= await api.get(`/products/search?q=${search}`
+)
+        return res.data.products
+    } catch (error) {
+        
+    }
+}
+
+export const getProductByCategory =async(categories)=>{
+    try {
+        const res = await api.get(fetch`/products/category/${categories}`)
+        console.log(res)
+    } catch (error) {
+        
+    }
+}

@@ -1,26 +1,25 @@
 const express = require("express");
 const uploads = require("../config/multer");
 
-const router = express.Router()
+const router = express.Router();
 
-
-router.get("/",(req,res)=>{
-    res.send("backend running properly")
+router.get("/", (req, res) => {
+  res.send("backend running properly");
 });
 
-router.post("/",uploads.single("image"),(req,res)=>{
-    try {
+router.post("/", uploads.array("image"), (req, res) => {
+  try {
+    const body = req.body;
+    const files = req.files;
 
-         const body = req.body
-        const file=req.file;
-                 console.log(body)
-         console.log(file)
+    console.log(body);
+    console.log(files);
 
-        res.status(200).json("images recieved successfully");
-    } catch (error) {
-        // console.log(error.message)
-    }
+    res.status(200).json("Images received successfully");
+  } catch (error) {
+    console.log(error);
+    res.status(500).json("Internal server error");
+  }
+});
 
-})
-
-module.exports =router;
+module.exports = router;
