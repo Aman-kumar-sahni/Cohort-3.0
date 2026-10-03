@@ -7,7 +7,7 @@ const startServer= async()=>{
     try {
 
         app.listen(3000,()=>{
-            console.log("server i8s running on port 3000")
+            console.log("server is running on port 3000")
         })
     
     } catch (error) {
