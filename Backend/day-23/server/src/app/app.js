@@ -1,8 +1,13 @@
 import express from "express";
-// import appRouter from "../routes/app.routes.js";
+import appRouter from "../routes/auth.routes.js";
+import cookieParser from "cookie-parser";
+
 const app = express();
 
 app.use(express.json());
-// app.use("/api/auth",appRouter);
+app.use(cookieParser());
+
+app.use("/api/auth",appRouter);
+
 
 export default app;
