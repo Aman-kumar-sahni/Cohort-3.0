@@ -6,7 +6,7 @@ export const genrateTokens = ({ userId, role }) => {
     },
         config.ACCESS_TOKEN_SECRET,
         {
-            expiresIn: "15m",
+            expiresIn: "45m",
         }
     );
     const refreshToken = jwt.sign(
