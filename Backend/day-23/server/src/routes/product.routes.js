@@ -20,3 +20,4 @@ router.get("/seller",authenticate,authenticateSeller,listAllProductToSeller);
 router.patch("/unlist/:id",authenticate,authenticateSeller,unlistProductValidator,unlistProduct)
 
 export default router;
+
